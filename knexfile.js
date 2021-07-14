@@ -1,11 +1,14 @@
 // Update with your config settings.
 const connectionString = process.env.DATABASE_URL;
-console.log(connectionString)
+
 module.exports = {
 
   development: {
     client: 'pg',
-    connection: connectionString
+    connection: connectionString,
+    migrations: {
+      tableName: 'knex_migrations'
+    }
   },
 
   staging: {
@@ -25,12 +28,8 @@ module.exports = {
   },
 
   production: {
-    client: 'postgresql',
-    connection: {
-      database: 'my_db',
-      user:     'username',
-      password: 'password'
-    },
+    client: 'pg',
+    connection: connectionString,
     pool: {
       min: 2,
       max: 10
