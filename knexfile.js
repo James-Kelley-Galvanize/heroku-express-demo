@@ -1,5 +1,5 @@
 // Update with your config settings.
-const connec tionString = process.env.DATABASE_URL;
+const connectionString = process.env.DATABASE_URL;
 console.log(connectionString)
 module.exports = {
 
