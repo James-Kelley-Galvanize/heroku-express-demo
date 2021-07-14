@@ -1,6 +1,6 @@
 
 exports.up = function(knex) {
-  knex.schema.createTable(`cats`,(table)=>{
+  return knex.schema.createTable(`cats`,(table)=>{
     table.increments(`id`);
     table.string(`name`);
     table.string(`breed`);
@@ -11,5 +11,5 @@ exports.up = function(knex) {
 };
 
 exports.down = function(knex) {
-  
+  return knex.schema.dropTableIfExists(`cats`)
 };
