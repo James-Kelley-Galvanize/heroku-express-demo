@@ -1,10 +1,11 @@
 // Update with your config settings.
-const connetionString = process.env.DATABASE_URL
+const connec tionString = process.env.DATABASE_URL;
+console.log(connectionString)
 module.exports = {
 
   development: {
     client: 'pg',
-    connection: connetionString
+    connection: connectionString
   },
 
   staging: {
